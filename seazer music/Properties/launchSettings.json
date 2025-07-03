@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "seazer music (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "seazer music (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

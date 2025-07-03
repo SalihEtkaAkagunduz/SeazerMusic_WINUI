@@ -1,0 +1,3138 @@
+﻿<Page
+    x:Class="seazer_music.Pages.Gözat"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:seazer_music.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled"  >
+        
+        <ScrollViewer.Resources>
+            <Style TargetType="ScrollBar">
+                <Setter Property="Margin" Value="0,50,0,0" />
+            </Style>
+        </ScrollViewer.Resources>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+
+            </Grid.RowDefinitions>
+         
+            <TextBlock FontWeight="Bold" Grid.Row="0" Margin="40,70,0,0" FontSize="15"   Text="Kategorilere Göz At"></TextBlock>
+            <Grid Grid.Row="1"  Margin="30,10,30,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- 6 SATIR: Her satırda 3 kutu -->
+
+                <!-- Satır 0 -->
+                <!-- Satır 0 -->
+                <Grid   Grid.Row="0" Grid.Column="0" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+        Padding="0"
+        BorderThickness="0"
+        HorizontalContentAlignment="Stretch"
+        VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                               Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="Transparent" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+               Source="/Assets/listimages/b1.jpg"
+               Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Lokal" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                        Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                        To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                        Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                        To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b2.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Uzamsal Ses" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="2" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b3.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Şarkıların Hikayeleri" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <!-- Satır 1 -->
+                <Grid Grid.Row="1" Grid.Column="0" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b4.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Soyut" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b5.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Türkçe" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="2" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b6.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Sosyal" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <!-- Satır 2 -->
+                <Grid Grid.Row="2" Grid.Column="0" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b7.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Fokus" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="1" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b8.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Akustik" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="2" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b9.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Yolda" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <!-- Satır 3 -->
+                <Grid Grid.Row="3" Grid.Column="0" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b10.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="70'ler" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="1" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b11.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="60'lar" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="2" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b12.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Akşam Olunca" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <!-- Satır 4 -->
+                <Grid Grid.Row="4" Grid.Column="0" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b13.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Blues" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="1" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b14.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Romantik" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="2" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b15.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Keyif" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <!-- Satır 5 -->
+                <Grid Grid.Row="5" Grid.Column="0" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b16.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Eğlence" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="1" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b17.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="2000'ler" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="2" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b18.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="80'ler" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <!-- Satır 6 -->
+                <Grid Grid.Row="6" Grid.Column="0" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b19.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="90'lar" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="1" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b20.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Uyku" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="2" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b21.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="AI" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <!-- Satır 7 -->
+                <Grid Grid.Row="7" Grid.Column="0" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b22.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Hit'ler" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="1" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b23.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Grup" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="2" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b24.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Caz" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <!-- Satır 8 -->
+                <Grid Grid.Row="8" Grid.Column="0" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b25.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Deniz" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="8" Grid.Column="1" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b26.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Klasik" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="8" Grid.Column="2" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b27.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Yıldızı Parlayanlar" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <!-- Satır 9 -->
+                <Grid Grid.Row="9" Grid.Column="0" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b28.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="2010'lar" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="9" Grid.Column="1" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b29.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="On Yıllar" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="9" Grid.Column="2" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b30.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Çocuk" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <!-- Satır 10 -->
+                <Grid Grid.Row="10" Grid.Column="0" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b31.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Sinema" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="10" Grid.Column="1" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b32.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Sanat Müziği" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="10" Grid.Column="2" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b33.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Canlı Müzik" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <!-- Satır 11 -->
+                <Grid Grid.Row="11" Grid.Column="0" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b34.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="R&amp;B" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="11" Grid.Column="1" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b35.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Halk Müziği" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="11" Grid.Column="2" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b36.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Listeler" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <!-- Satır 12 -->
+                <Grid Grid.Row="12" Grid.Column="0" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b48.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Tatil" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="12" Grid.Column="1" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b38.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Pop" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="12" Grid.Column="2" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b39.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Hip-Hop/Rap" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <!-- Satır 13 -->
+                <Grid Grid.Row="13" Grid.Column="0" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b47.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="DJ Mixleri" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="13" Grid.Column="1" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b41.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="K-Pop" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="13" Grid.Column="2" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b42.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="En İyileri" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <!-- Satır 14 -->
+                <Grid Grid.Row="14" Grid.Column="0" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b43.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Dans" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="14" Grid.Column="1" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b44.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Elektronik" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+                <Grid Grid.Row="14" Grid.Column="2" Margin="10">
+                    <Viewbox  Stretch="Uniform"  >
+                        <Button Width="300"   Height="100"
+Padding="0"
+BorderThickness="0"
+HorizontalContentAlignment="Stretch"
+VerticalContentAlignment="Stretch">
+
+                            <Button.Template  >
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <!-- Köşeleri gerçekten kesmek için ClipGeometry -->
+                                        <Grid.Clip>
+                                            <RectangleGeometry   
+                       Rect="0,0,300,170"/>
+                                        </Grid.Clip>
+
+                                        <!-- Arka plan resmi -->
+                                        <Border Background="#80000000" CornerRadius="10">
+                                            <Image x:Name="BackgroundImage"
+       Source="/Assets/listimages/b45.jpg"
+       Stretch="UniformToFill"/>
+
+                                        </Border>
+
+
+                                        <!-- Karartma -->
+                                        <Border Background="#20000000" CornerRadius="10"/>
+
+                                        <!-- Hover & Pressed efekti -->
+                                        <Frame x:Name="Overlay" Background="Transparent" CornerRadius="10"/>
+
+                                        <!-- Metin -->
+                                        <ContentPresenter HorizontalAlignment="Stretch"
+VerticalAlignment="Bottom"
+Content="Caz" Margin="15,0,0,15"
+Foreground="White"
+FontSize="16"
+FontWeight="Bold"/>
+
+                                        <!-- Visual States -->
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="PointerOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#33FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetName="Overlay"
+                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                To="#55FFFFFF" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+
+                            </Button.Template>
+                        </Button>
+
+                    </Viewbox>
+                </Grid>
+
+                <!-- Satır tanımları -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+
+
+                </Grid.RowDefinitions>
+            </Grid>
+        </Grid>
+
+    </ScrollViewer>
+
+
+
+</Page>
+

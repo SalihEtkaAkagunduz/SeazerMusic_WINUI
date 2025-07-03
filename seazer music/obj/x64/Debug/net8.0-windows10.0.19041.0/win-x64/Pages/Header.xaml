@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="seazer_music.Pages.Header"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:seazer_music.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <AcrylicBrush
+            x:Key="CustomAcrylicInAppLuminosity"
+            FallbackColor="#292929"
+            TintColor="#292929"
+            TintLuminosityOpacity="0.400000000000008"
+            TintOpacity="0.4000000470224768" />
+    </Page.Resources>
+
+    <Border
+        Grid.Row="0"
+        Height="63"
+        Padding="0,0,0,0"
+        Canvas.ZIndex="33"
+        Opacity="1">
+        <Grid>
+            <Rectangle Fill="{ThemeResource CustomAcrylicInAppLuminosity}" />
+
+            <Grid>
+                <Grid Margin="0,0,155,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <!--  Resim  -->
+                        <ColumnDefinition Width="Auto" />
+                        <!--  Şarkı adı  -->
+                        <ColumnDefinition Width="*" />
+
+                        <ColumnDefinition Width="Auto" />
+                        <!--  Butonlar  -->
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--  Şarkı Kapağı  -->
+                    <Border
+                        Grid.Column="0"
+                        Width="50"
+                        Height="50"
+                        Margin="7,0,0,0"
+                        VerticalAlignment="Center"
+                        BorderThickness="0"
+                        CornerRadius="4">
+                        <Image Source="https://upload.wikimedia.org/wikipedia/en/b/b4/Shape_Of_You_%28Official_Single_Cover%29_by_Ed_Sheeran.png" Stretch="UniformToFill" />
+                    </Border>
+
+                    <!--  Şarkı Bilgileri  -->
+                    <StackPanel
+                        Grid.Column="1"
+                        Margin="14,0"
+                        VerticalAlignment="Center"
+                        Orientation="Vertical"
+                        Spacing="3">
+                        <TextBlock
+                            FontSize="14"
+                            FontWeight="Bold"
+                            Foreground="White"
+                            Text="Shape of You" />
+                        <TextBlock
+                            FontSize="12"
+                            Foreground="#DDFFFFFF"
+                            Text="Ed Sheeran" />
+                    </StackPanel>
+                    <StackPanel
+                        Grid.Column="2"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Orientation="Vertical"
+                        Spacing="0">
+
+                        <!--  Medya Kontrol Butonları  -->
+                        <StackPanel
+                            Margin="0,13,0,0"
+                            HorizontalAlignment="Center"
+                            Orientation="Horizontal"
+                            Spacing="8">
+                            <!--  Karıştır  -->
+                            <Button
+                                Width="33"
+                                Height="33"
+                                Padding="0"
+                                Background="Transparent"
+                                BorderBrush="Transparent">
+                                <FontIcon
+                                    Margin="0,0,0,0"
+                                    FontFamily="/Assets/fonts/icomoon.ttf#icomoon"
+                                    FontSize="17"
+                                    Foreground="LightGray"
+                                    Glyph="&#xea30;" />
+                            </Button>
+
+                            <!--  Önceki Şarkı  -->
+                            <Button
+                                Width="33"
+                                Height="33"
+                                Padding="0"
+                                Background="Transparent"
+                                BorderBrush="Transparent">
+                                <FontIcon
+                                    FontFamily="/Assets/fonts/icomoon.ttf#icomoon"
+                                    FontSize="23"
+                                    Foreground="LightGray"
+                                    Glyph="&#xe934;" />
+                            </Button>
+
+                            <!--  Oynat / Duraklat  -->
+                            <Button
+                                Width="33"
+                                Height="33"
+                                Padding="0"
+                                Background="Transparent"
+                                BorderBrush="Transparent">
+                                <FontIcon
+                                    FontFamily="/Assets/fonts/icomoon.ttf#icomoon"
+                                    FontSize="30"
+                                    Foreground="LightGray"
+                                    Glyph="&#xe932;" />
+                            </Button>
+
+                            <!--  Sonraki Şarkı  -->
+                            <Button
+                                Width="33"
+                                Height="33"
+                                Padding="0"
+                                Background="Transparent"
+                                BorderBrush="Transparent">
+                                <FontIcon
+                                    FontFamily="/Assets/fonts/icomoon.ttf#icomoon"
+                                    FontSize="23"
+                                    Foreground="LightGray"
+                                    Glyph="&#xe936;" />
+                            </Button>
+
+                            <!--  Tekrarla  -->
+                            <Button
+                                Width="33"
+                                Height="33"
+                                Padding="0"
+                                Background="Transparent"
+                                BorderBrush="Transparent">
+                                <FontIcon
+                                    Margin="0,0,0,3"
+                                    FontFamily="/Assets/fonts/icomoon.ttf#icomoon"
+                                    FontSize="17"
+                                    Foreground="LightGray"
+                                    Glyph="&#xe919;" />
+                            </Button>
+                        </StackPanel>
+
+                        <!--  Altındaki Slider (Zaman Çubuğu)  -->
+                        <StackPanel x:ConnectionId='5'
+                            Margin="0,-9,0,0"
+                            VerticalAlignment="Center"
+                                                  
+                            Orientation="Horizontal">
+                            <!--  Sol Süre  -->
+                            <TextBlock x:ConnectionId='6'
+                                x:Name="TextStart"
+                                Width="25"
+                                Margin="0,0,8,0"
+                                VerticalAlignment="Center"
+                                Foreground="White"
+                                Text="0:25"
+                                Visibility="Collapsed" />
+
+                            <!--  Slider  -->
+                            <Slider x:ConnectionId='7'
+                                x:Name="MySlider"
+                                Width="400"
+                                Height="32"
+                                Background="#444"
+                                Foreground="LightGray"
+                                IsThumbToolTipEnabled="False"
+                                                                                      
+                                ManipulationMode="TranslateX"
+                                                                                  
+                                Maximum="100"
+                                Minimum="0"
+                                                                      
+                                                                    
+                                                                    
+                                Value="25" />
+
+
+
+                            <!--  Sağ Süre  -->
+                            <TextBlock x:ConnectionId='8'
+                                x:Name="TextEnd"
+                                Width="25"
+                                Margin="8,0,0,0"
+                                VerticalAlignment="Center"
+                                Foreground="White"
+                                Text="3:42"
+                                Visibility="Collapsed" />
+                        </StackPanel>
+
+                    </StackPanel>
+                    <StackPanel
+                        Grid.Column="3"
+                        Margin="10,0,0,0"
+                        VerticalAlignment="Center"
+                        Orientation="Horizontal">
+                        <Button
+                            Width="40"
+                            Height="40"
+                            Margin="0,0,5,0"
+                            Padding="0"
+                            Background="Transparent"
+                            BorderThickness="0">
+                            <Button.Flyout>
+                                <Flyout>
+                                    <StackPanel Width="200" Padding="10">
+                                        <!--  Ses Seviyesi Slider  -->
+                                        <TextBlock
+                                            Margin="0,0,2,5"
+                                            FontSize="14"
+                                            Foreground="LightGray"
+                                            Text="Ses Seviyesi" />
+                                        <Slider x:ConnectionId='2'
+                                            x:Name="volumeSlider"
+                                            Width="180"
+                                            Margin="0,0,0,10"
+                                            Maximum="100"
+                                            Minimum="0"
+                                                                                    
+                                            Value="50" />
+
+                                        <!--  Sessize Alma Butonu  -->
+                                        <StackPanel
+                                            HorizontalAlignment="Center"
+                                            Orientation="Horizontal"
+                                            Spacing="10">
+                                            <!--  Sessize Alma Butonu  -->
+                                            <ToggleButton x:ConnectionId='3'
+                                                x:Name="tgbtn"
+                                                Width="40"
+                                                Height="40"
+                                                Margin="0,0,5,0"
+                                                Background="Transparent"
+                                                BorderThickness="0"
+                                                                              
+                                                                                  >
+                                                <StackPanel Orientation="Horizontal">
+                                                    <FontIcon
+                                                        Margin="0,0,12,0"
+                                                        FontFamily="/Assets/fonts/icomoon.ttf#icomoon"
+                                                        Glyph="&#xe93d;" />
+                                                </StackPanel>
+                                            </ToggleButton>
+                                            <!--  Sesi Aç Butonu  -->
+                                            <Button
+                                                Width="40"
+                                                Height="40"
+                                                Margin="0,0,5,0"
+                                                Background="Transparent"
+                                                BorderThickness="0">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <FontIcon
+                                                        Margin="0,0,12,0"
+                                                        FontFamily="Segoe MDL2 Assets"
+                                                        FontSize="17"
+                                                        Glyph="&#xE9E9;" />
+                                                </StackPanel>
+                                            </Button>
+                                            <Button
+                                                Width="40"
+                                                Height="40"
+                                                Margin="0,0,5,0"
+                                                Background="Transparent"
+                                                BorderThickness="0">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <FontIcon
+                                                        Margin="0,0,12,0"
+                                                        FontFamily="/Assets/fonts/icomoon.ttf#icomoon"
+                                                        FontSize="19"
+                                                        Glyph="&#xe920;" />
+                                                </StackPanel>
+                                            </Button>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Flyout>
+                            </Button.Flyout>
+                            <StackPanel Orientation="Horizontal">
+                                <FontIcon x:ConnectionId='4'
+                                    x:Name="sesbtnfnt"
+                                    Margin="3,0,0,0"
+                                    FontSize="22"
+                                    Foreground="LightGray"
+                                    Glyph="&#xE993;" />
+                            </StackPanel>
+                        </Button>
+                        <Button
+                            Width="40"
+                            Height="40"
+                            Margin="0,0,5,0"
+                            Background="Transparent"
+                            BorderThickness="0">
+                            <StackPanel Orientation="Horizontal">
+                                <FontIcon
+                                    Margin="0,0,12,0"
+                                    FontFamily="/Assets/fonts/icomoon.ttf#icomoon"
+                                    FontSize="19"
+                                    Foreground="LightGray"
+                                    Glyph="&#xe922;" />
+                            </StackPanel>
+                        </Button>
+                        <Button
+                            Width="40"
+                            Height="40"
+                            Margin="0,0,5,0"
+                            Background="Transparent"
+                            BorderThickness="0">
+                            <StackPanel Orientation="Horizontal">
+                                <FontIcon
+                                    Margin="0,0,12,0"
+                                    FontFamily="/Assets/fonts/icomoon.ttf#icomoon"
+                                    FontSize="23"
+                                    Foreground="LightGray"
+                                    Glyph="&#xe91a;" />
+                            </StackPanel>
+                        </Button>
+
+
+                    </StackPanel>
+
+                </Grid>
+                <Border
+                    Height="1"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Bottom"
+                    Background="#334"
+                    Opacity="0.5" />
+            </Grid>
+        </Grid>
+
+
+    </Border>
+
+</Page>
+

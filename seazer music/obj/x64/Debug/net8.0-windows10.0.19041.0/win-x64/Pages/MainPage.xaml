@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Page x:ConnectionId='1'
+    x:Class="seazer_music.Pages.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:seazer_music.Pages"
+    xmlns:local2="using:seazer_music.CustomControls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="using:seazer_music.Class"
+    mc:Ignorable="d">
+    <ScrollViewer>
+
+        <Grid Margin="0,60,0,0" VerticalAlignment="Top">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />  <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!--  Ana Sayfa Başlığı  -->
+            <TextBlock
+                Grid.Row="0"
+                Margin="35,10,0,32"
+                FontSize="33"
+                FontWeight="SemiBold"
+                Foreground="#d9dedb"
+                Text="Ana Sayfa" />
+            <local2:MediumlistItem x:ConnectionId='2'
+                Title="Sana Özel"
+                Grid.Row="1"
+                                                                              />
+
+            <local2:BasicListItem x:ConnectionId='3'
+                Title="Modunu Bul"
+                Grid.Row="2"
+                                                                      />
+            <local2:BasicListItem x:ConnectionId='4'
+                Title="Hüzünlü Türkçe Listeler"
+                Grid.Row="4"
+                                                                            />
+            <local2:ClassicVideoItem x:ConnectionId='5'
+                Title="Dünyada Popüler Klipler"
+                Grid.Row="5"
+                                                                             />
+            <local2:BasicListItem x:ConnectionId='6'
+                Title="Türkçe Hit Listeler"
+                Grid.Row="6"
+                                                                             />
+            <local2:BasicListItem x:ConnectionId='7'
+                Title="Youtube Music'te Popüler"
+                Grid.Row="7"
+                                                                                />
+            <local2:FooterListView x:ConnectionId='8'
+                Title="Platformlar"
+                Grid.Row="8"
+                                                                            />
+
+
+
+            <!--<local2:BasicListItem
+            Title="En Çok Dinlenen Mixler"
+            Grid.Row="8"
+            Items="{x:Bind ViewModel.BasicListMods, Mode=OneWay}" />
+
+            <local2:BasicListItem
+            Title="Sanatçıların En Çok Dinlenenleri"
+            Grid.Row="9"
+            Items="{x:Bind ViewModel.BasicListMods, Mode=OneWay}" />
+
+
+            <local2:BasicListItem
+            Title="Son Çalınan Listeler"
+            Grid.Row="10"
+            Items="{x:Bind ViewModel.BasicListMods, Mode=OneWay}" />
+
+            <local2:BasicListItem
+            Title="Son Çalınan Podcastler"
+            Grid.Row="11"
+            Items="{x:Bind ViewModel.BasicListMods, Mode=OneWay}" />
+            <local2:BasicListItem
+            Title="Sanatçıların En Çok Dinlenenleri"
+            Grid.Row="12"
+            Items="{x:Bind ViewModel.BasicListMods, Mode=OneWay}" />-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </Grid>
+    </ScrollViewer>
+
+</Page>
+

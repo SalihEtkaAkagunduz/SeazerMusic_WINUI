@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ActiveDebugProfile>seazer music (Package)</ActiveDebugProfile>
+    <Source>C:\Users\s2344\source\repos\seazer music\seazer music\Assets\logo.png</Source>
+    <SmallTileSource>C:\Users\s2344\source\repos\seazer music\seazer music\Assets\logo.png</SmallTileSource>
+    <MediumTileSource>C:\Users\s2344\source\repos\seazer music\seazer music\Assets\logo.png</MediumTileSource>
+    <WideTileSource>C:\Users\s2344\source\repos\seazer music\seazer music\Assets\logo.png</WideTileSource>
+    <LargeTileSource>C:\Users\s2344\source\repos\seazer music\seazer music\Assets\logo.png</LargeTileSource>
+    <AppIconSource>C:\Users\s2344\source\repos\seazer music\seazer music\Assets\logo.png</AppIconSource>
+    <SplashScreenSource>C:\Users\s2344\source\repos\seazer music\seazer music\Assets\logo.png</SplashScreenSource>
+    <PackageLogoSource>C:\Users\s2344\source\repos\seazer music\seazer music\Assets\logo.png</PackageLogoSource>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="App.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <Page Update="CustomControls\GözatHeaderItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CustomControls\FooterListView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CustomControls\ClassicVideoItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CustomControls\MediumlistItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CustomControls\BasicListItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <None Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </None>
+    <Page Update="Pages\Recent.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Settings.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ClipAll.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ClipFavorite.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ClipMain.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PodcastAll.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PodcastFavorite.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PodcastMain.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ListFavorite.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ListsAll.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Songs.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Albums.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Artists.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Library.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ListsMain.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Explore.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\MainPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Header.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Gözat.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
