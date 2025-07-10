@@ -2,7 +2,7 @@
 
 Seazer Music, Windows 11 uyumlu, modern bir **WinUI 3 müzik uygulaması**dır. Amacı, YouTube Music gibi hizmetlerden ilham alarak kullanıcıya özel çalma listeleri, görsel odaklı liste yapıları ve özelleştirilebilir arayüz deneyimi sunmaktır.
 
-> 🚧 Uygulama gelişimi kaynak kodların zarar görmesi sonucu askı ya alınmıştır .
+> 🚧 Uygulama gelişimi kaynak kodların zarar görmesi sonucu askı ya alınmıştır.
 
 ---
 
